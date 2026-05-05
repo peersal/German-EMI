@@ -1,0 +1,38 @@
+# Tested with Python 3.9.1
+# Install via: pip install -r requirements.txt
+
+# --- Core scientific stack ---
+numpy>=1.23
+pandas>=1.5
+scipy>=1.10
+scikit-learn>=1.2
+
+# --- Statistics / regression ---
+statsmodels>=0.14         # MixedLM, breakpoint regressions
+pingouin>=0.5             # ICCs for the validation survey
+krippendorff>=0.6         # inter-rater reliability
+
+# --- Embeddings / NLP ---
+gensim>=4.3               # word2vec base + fine-tuning
+sentence-transformers>=2.2  # paraphrase-multilingual-mpnet-base-v2 in BERTopic
+transformers>=4.30
+torch>=2.0
+nltk>=3.8
+wordfreq>=3.0
+fasttext>=0.9.2           # generic German embeddings for the cross-model robustness check
+
+# --- Topic modelling ---
+bertopic>=0.15
+umap-learn>=0.5
+hdbscan>=0.8
+
+# --- Plotting ---
+matplotlib>=3.7
+seaborn>=0.12
+wordcloud>=1.9
+
+# --- IO / utilities ---
+tqdm>=4.65
+ujson>=5.7
+jupyter>=1.0
+ipykernel>=6.20

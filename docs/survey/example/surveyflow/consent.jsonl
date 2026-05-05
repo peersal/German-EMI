@@ -1,0 +1,4 @@
+{"id":"1","text":"Ich habe die Anweisungen gelesen und verstanden.","schema": "radio", "choices": ["Ja", "Nein"], "label_requirement": {"right_label":["Ja"]}}
+{"id":"2","text":"Sie sind 18 Jahre oder aelter","schema": "radio", "choices": ["Ja", "Nein"], "label_requirement": {"right_label":["Ja"]}}
+{"id":"3","text":"Ich bin einverstanden, dass  Ihre Daten als open data veroeffentlicht werden. Das bedeutet, dass die anonymisierten Daten oeffentlich zugaenglich sind und fuer Zwecke verwendetwerden koennen, die nicht mit dieser Studie zusammenhaengen. Es wird nicht moeglich sein, Sie anhand dieser Daten zu identifizieren.","schema": "radio", "choices": ["Ja", "Nein"], "label_requirement": {"right_label":["Ja"]}}
+{"id":"4","text":"Ich stimme meiner Teilnahme an der Studie zu","schema": "radio", "choices": ["Ja", "Nein"], "label_requirement": {"right_label":["Ja"]}}
