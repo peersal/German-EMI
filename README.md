@@ -19,13 +19,18 @@ The Twitter analysis is among the first to use platform data accessed through th
 ```
 German-EMI/
 ├── code/         # All analysis code (Jupyter notebooks + one R script)
+├── demo/         # Small self-contained demo of the statistical analysis
 ├── docs/         # Manuscript PDF and survey materials
 ├── plots/        # Final figures (main paper + supplementary)
+├── LICENSE
 └── requirements.txt
 ```
 
 ### `code/`
 The full pipeline, organised top-down by stage. File prefixes encode `0[stage][substage][sequence]` — e.g. `0521_*` is stage 5 (validation), substage 2 (emi), file 1.
+
+### `demo/`
+A small, self-contained demo of the downstream statistical analysis: it fits the paper's two core mixed-effects specifications — the constrained breakpoint model on 2,932 Bundestag speeches and the baseline model on 6,000 tweets — using precomputed EMI scores, and writes the regression tables and quarterly EMI trend figures to `demo_output/`. Runs in a few seconds on any machine with Python ≥ 3.9; no GPU or full corpora needed. See [`demo/README.md`](demo/README.md) for system requirements, installation, and expected output.
 
 ### `docs/`
 - `writing/NHB.pdf` — the manuscript itself.
@@ -189,4 +194,4 @@ If you use this code, please cite the paper (DOI to be assigned upon acceptance)
 
 ## License
 
-MIT.
+MIT — see [LICENSE](LICENSE).
