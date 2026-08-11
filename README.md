@@ -107,7 +107,7 @@ code/
 
 ### 02_models — embedding training
 
-Trains the gensim word2vec backbone used by the DDR pipeline. The base model is pre-trained on the combined historical Bundestag corpus, then fine-tuned separately on the Twitter and contemporary Bundestag corpora to obtain platform-specific embeddings.
+Trains the gensim word2vec backbone used by the DDR pipeline. The base model is pre-trained on the combined historical Bundestag corpus, then fine-tuned separately on the Twitter and contemporary Bundestag corpora to obtain platform-specific embeddings. Model training and embedding computation were run on a dedicated compute node with an NVIDIA H100 GPU, with a total runtime under 8 hours.
 
 | Script | Description |
 |---|---|
