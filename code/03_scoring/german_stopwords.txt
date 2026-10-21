@@ -1,4 +1,5 @@
-# German stopword list used in preprocessing (0113_preprocess_speeches.ipynb, 0304_score_emi.py): NLTK stopwords corpus, language "german", 232 words, nltk 3.10.3
+# Stop words removed from Bundestag speeches (0113_preprocess_speeches.ipynb, 0304_score_emi.py).
+# Part 1: NLTK German stop-word list (232 words, nltk 3.10.3). Part 2: 15 additional high-frequency words.
 aber
 alle
 allem
@@ -231,3 +232,19 @@ zur
 zwar
 zwischen
 über
+# --- additional words ---
+aber
+aus
+dem
+dm
+dr
+ist
+ja
+könnte
+machen
+nur
+sei
+tun
+uns
+vor
+wollen
