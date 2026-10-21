@@ -36,3 +36,7 @@ tqdm>=4.65
 ujson>=5.7
 jupyter>=1.0
 ipykernel>=6.20
+
+# --- Revision analyses (2026) ---
+pyarrow>=14               # parquet output of the LLM annotation (code/05_validation/llm)
+# potato-annotation==2.8.2  # only for running the validation surveys in docs/survey/revision (separate venv recommended)

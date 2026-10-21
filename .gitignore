@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+demo/demo_output/
+**/configs/prolific_config.yaml
+.ipynb_checkpoints/

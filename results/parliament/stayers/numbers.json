@@ -1,0 +1,59 @@
+{
+ "n_speeches_all": 59170,
+ "n_pol_all": 1392,
+ "n_pol_both_periods": 682,
+ "n_pol_only_early": 256,
+ "n_pol_only_late": 454,
+ "n_speeches_only_late": 9841,
+ "n_speeches_only_early": 4012,
+ "share_late_speeches_by_entrants": 0.28568525561006763,
+ "share_early_speeches_by_leavers": 0.16227804069085466,
+ "decomp": {
+  "total": -0.3513579906364459,
+  "within_stayers": -0.3386422836433953,
+  "stayers_share": 0.9638098255001474,
+  "stay_early": 0.14918407410187762,
+  "stay_late": -0.18945820954151768,
+  "entrants_late": -0.04016692632926973,
+  "leavers_early": 0.49036409551568627
+ },
+ "paired": {
+  "n": 612,
+  "mean_change": -0.23290616368753092,
+  "ci": [
+   -0.2728796898299103,
+   -0.19310949027550522
+  ],
+  "t": -11.892523531314191,
+  "p": 1.7519223834039766e-29,
+  "share_declining": 0.6895424836601307,
+  "wilcoxon_p": 9.726589257110018e-29,
+  "median": -0.22009782582535017
+ },
+ "skipped_bp_interactions": {
+  "all": [
+   "elec2017"
+  ],
+  "panelA": [],
+  "panelB": [
+   "elec2017"
+  ]
+ },
+ "panelA": {
+  "n_pol": 234,
+  "n_speeches": 19784,
+  "leanings": {
+   "left": 21,
+   "middle": 214
+  }
+ },
+ "panelB": {
+  "n_pol": 434,
+  "n_speeches": 34815,
+  "leanings": {
+   "left": 32,
+   "middle": 348,
+   "right": 55
+  }
+ }
+}

@@ -1,0 +1,21 @@
+cohort,party,n_pol,n_speeches,mean_emi
+entrant,AFD,75,820,-0.28
+entrant,Alliance 90/The Greens,83,2518,-0.087
+entrant,BSW,2,12,-0.76
+entrant,CDU/CSU,80,1468,-0.147
+entrant,FDP,38,1062,0.114
+entrant,SPD,129,3292,0.115
+entrant,The Left Party,50,669,-0.328
+leaver,AFD,4,35,0.683
+leaver,Alliance 90/The Greens,17,696,0.527
+leaver,CDU/CSU,127,1346,0.476
+leaver,FDP,5,36,-0.137
+leaver,SPD,83,1123,0.37
+leaver,The Left Party,21,776,0.676
+stayer,AFD,88,5861,-0.506
+stayer,Alliance 90/The Greens,66,5951,0.036
+stayer,BSW,8,141,-1.127
+stayer,CDU/CSU,238,13876,0.099
+stayer,FDP,78,5048,-0.157
+stayer,SPD,143,8847,0.08
+stayer,The Left Party,70,5593,0.009

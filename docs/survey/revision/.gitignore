@@ -1,0 +1,4 @@
+annotation_output/
+project.sqlite*
+layouts/
+**/configs/prolific_config.yaml

@@ -1,0 +1,16 @@
+# Template for the optional Prolific API integration.
+# Copy to prolific_config.yaml, fill in, and NEVER commit the real token
+# (prolific_config.yaml is git-ignored).
+#
+# Enable in configs/config.yaml:
+#   login:
+#     type: prolific
+#     url_argument: PROLIFIC_PID
+#   prolific:
+#     config_file_path: configs/prolific_config.yaml
+
+token: "your-prolific-api-token"
+study_id: "your-study-id"
+workload_checker: true
+max_concurrent_sessions: 30
+workload_checker_period: 300

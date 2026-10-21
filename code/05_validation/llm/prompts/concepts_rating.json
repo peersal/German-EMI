@@ -1,0 +1,8 @@
+{
+    "evidenz_basiert": {
+        "definition": "Dieser Textausschnitt ist evidenzbasiert: die Argumentation stuetzt sich auf ueberpruefbare Tatsachen, Zahlen, Daten, Studien, Expertenwissen oder nachvollziehbare Ursache-Wirkungs-Begruendungen."
+    },
+    "intuition_basiert": {
+        "definition": "Dieser Textausschnitt ist intuitionsbasiert: die Argumentation stuetzt sich auf Bauchgefuehl, Ueberzeugung, gesunden Menschenverstand, Gefuehle, Werte, Anekdoten oder darauf, was jeder weiss."
+    }
+}

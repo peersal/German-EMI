@@ -21,10 +21,13 @@ German-EMI/
 ├── code/         # All analysis code (Jupyter notebooks + one R script)
 ├── demo/         # Small self-contained demo of the statistical analysis
 ├── docs/         # Manuscript PDF and survey materials
-├── plots/        # Final figures (main paper + supplementary)
+├── plots/        # Final figures (main paper + supplementary + revision)
+├── results/      # Small result tables of the revision scripts (see results/README.md)
 ├── LICENSE
 └── requirements.txt
 ```
+
+The scripts of the 2026 revision expect the OSF data in `data/` (not in the repository) and write to `results/`; see [Revision analyses (2026)](#revision-analyses-2026).
 
 ### `code/`
 The full pipeline, organised top-down by stage. File prefixes encode `0[stage][substage][sequence]` — e.g. `0521_*` is stage 5 (validation), substage 2 (emi), file 1.
@@ -36,10 +39,12 @@ A small, self-contained demo of the downstream statistical analysis: it fits the
 - `writing/NHB.pdf` — the manuscript itself.
 - `survey/` — consent forms, instructions, and the funding application that supported the validation surveys.
 - `survey/example/` — a worked example of the Prolific survey flow (configs, templates, data files).
+- `survey/revision/` — the potato projects of the two new validation surveys of the revision (Bundestag passages, tweets) and the surveyflow of the original 2024 survey.
 
 ### `plots/`
 - `main/` — figures used in the main paper (`parliament/`, `twitter/` subfolders for arena-specific plots, plus combined overlay and ROC).
 - `supplementary/` — extended-data and supplementary-note figures (annotator demographics, bootstrap CIs, correlation matrices, density distributions, word-shift graphs, etc.).
+- `revision/` — figures of the 2026 revision (cross-platform figure with the AfD-entry split, contagion figures, composition, LLM annotation); `plots/revision/README.md` maps each file to its script.
 
 ---
 
@@ -51,7 +56,9 @@ code/
 │   ├── parliament/
 │   │   ├── 0111_get_speeches_new.ipynb
 │   │   ├── 0112_get_speeches_old.ipynb
-│   │   └── 0113_preprocess_speeches.ipynb
+│   │   ├── 0113_preprocess_speeches.ipynb
+│   │   ├── 0114_extract_bundestag_2000.py      (revision)
+│   │   └── 0115_build_input_2000_2025.py       (revision)
 │   └── twitter/
 │       └── 0121_twitter_data.ipynb
 │
@@ -64,18 +71,29 @@ code/
 ├── 03_scoring/           # 3. EMI scoring + topic modelling
 │   ├── 0301_sbert_emi_speeches.ipynb
 │   ├── 0302_sbert_emi_twitter.ipynb
-│   └── 0303_topic_modelling.ipynb
+│   ├── 0303_topic_modelling.ipynb
+│   └── 0304_score_emi.py                       (revision: scoring module reused by the revision scripts)
 │
 ├── 04_analysis/          # 4. Descriptive + regression analysis
 │   ├── 0401_descriptives.ipynb
 │   ├── 0402_group_plots.ipynb
-│   └── 0403_analysis.ipynb
+│   ├── 0403_analysis.ipynb                     (updated in the revision)
+│   ├── 0404_revision_analysis.ipynb            (revision)
+│   ├── 0405_composition_stayers.py             (revision)
+│   ├── 0406_run_figure_cells.py                (revision)
+│   ├── 0407_xplat_figure_cell.py, 0408_xplat_run_cell.py, 0409_xplat_split2000_cell.py
+│   ├── contagion/   0411–0426                  (revision: within-sitting contagion)
+│   └── mechanisms/  0431–0436                  (revision: mechanism tests)
 │
 └── 05_validation/        # 5. Validation studies
     ├── document/
     │   ├── 0511_validation_sample.ipynb
     │   ├── 0512_process_survey_data.ipynb
-    │   └── 0513_emi_validation.ipynb
+    │   ├── 0513_emi_validation.ipynb
+    │   └── 0514–0516 *.py                      (revision: validation by era and party)
+    ├── topics/      0541, 0542                  (revision: topic controls on identical samples)
+    ├── llm/         0551–0559 + prompts/        (revision: LLM annotation)
+    ├── survey/      0561, 0562                  (revision: new validation surveys)
     ├── emi/
     │   ├── 0521_corpus_analysis_speeches.ipynb
     │   ├── 0522_corpus_analysis_twitter.ipynb
@@ -134,7 +152,7 @@ The empirical core of the paper: time-series, descriptives, and the three mixed-
 |---|---|
 | `0401_descriptives.ipynb` | Corpus-level descriptives: speeches/tweets per year, party/leaning composition, EMI distributions, and basic temporal trends. |
 | `0402_group_plots.ipynb` | Group-level plotting helpers: party- and leaning-stratified time series, density overlays, and the per-arena components (intuition similarity, evidence similarity, EMI). |
-| `0403_analysis.ipynb` | Main regression pipeline: quarterly aggregation, baseline linear MixedLM with leaning × time interaction and lagged EMI, breakpoint model with piecewise-linear and level-shift terms at each election (2017, 2021, 2025), and the full breakpoint model with leaning-specific slope/level deviations. Model fit via likelihood-ratio, AIC/BIC, ICC, and Durbin–Watson. |
+| `0403_analysis.ipynb` | Main regression pipeline: quarterly aggregation, baseline linear MixedLM with leaning × time interaction and lagged EMI, breakpoint model with piecewise-linear and level-shift terms at each election (2017, 2021, 2025), and the full breakpoint model with leaning-specific slope/level deviations. Model fit via likelihood-ratio, AIC/BIC, ICC, and Durbin–Watson. Updated in the revision: cross-platform figure and per-dataset figures with the before/after split at the AfD's entry (24 Oct 2017), density panels, the 2000–2025 comparison and the within-sitting contagion cell. |
 
 ### 05_validation — validation studies
 
@@ -166,6 +184,53 @@ Three complementary validation tracks for the EMI measure.
 | Script | Description |
 |---|---|
 | `0531_prodeminfo_kw_validation.R` | R script that runs paired t-tests of intuition vs. evidence ratings per candidate keyword with Holm-corrected p-values; retains 86 of 113 candidate keywords. |
+
+---
+
+## Revision analyses (2026)
+
+Analyses added in the revision of the paper. All scripts run from the repository root with the OSF data in `data/` (`data/parliament_nhb.csv`, `data/twitter_nhb.csv`, `data/validation/`, the parliament word2vec model in `data/parliament_model/`) and write to `results/`; intermediate files they create go to `data/revision/` and `data/llm/`. Every script resolves paths from its own location, so `python code/04_analysis/0405_composition_stayers.py` works from anywhere. The notebooks are stored without outputs and change to the repository root in their first cell.
+
+**Bundestag corpus 2000–2025 and composition of the shift**
+
+| Script | Description | Output |
+|---|---|---|
+| `01_data/parliament/0114_extract_bundestag_2000.py` | Extracts all plenary speeches from January 2000 from the Open Discourse record (`data/full_parliament/speeches_table_Germany.json`). | `data/revision/bundestag_speeches_2000_2025_raw.csv` |
+| `01_data/parliament/0115_build_input_2000_2025.py` | Joins the paper's 2015–2025 speeches with the 2000–2014 extension and applies the paper's preprocessing. | `data/revision/bundestag_2000_2025_input.csv` |
+| `03_scoring/0304_score_emi.py` | Re-scores texts with the paper's parliament embedding model (document vectors, length-bin adjustment, z-scores); CLI (`--input/--text/--id/--output`) and module used by the other scripts. Preprocessing follows `0113`; the German stopword list it removes (NLTK, 232 words) is stored in `03_scoring/german_stopwords.txt`. | `data/revision/bundestag_2000_2025_scored.csv` |
+| `04_analysis/0404_revision_analysis.ipynb` | Section-by-section revision notebook: cohort analysis, 2000–2025 series with shifts at all seven elections, placebo breakpoints and single-break search, validation by era and party, topic controls, ideological distance and constituency exposure, mechanism tests, contagion summary. One `numbers.json` per section. | `results/revision/<section>/` |
+| `04_analysis/0405_composition_stayers.py` | Shift-share decomposition into stayers / entrants / leavers, paired within-politician change, politician fixed-effects and balanced-panel breakpoint models. `STAYERS_SPLIT=2017-10-24` splits at the AfD's entry (default 2020-01-01). | `results/parliament/stayers_afd/`, `results/parliament/stayers/` |
+| `04_analysis/0406_run_figure_cells.py` | Runs the figure cells of `0403_analysis.ipynb` outside Jupyter: `fig` (cross-platform figure, uses `0407`/`0408`), `rq1`, `v2`, `split`, `split2000` (`0409`, before/after the AfD's entry on the 2000–2025 corpus), `contagion` (`contagion/0411`). | `results/emi_twitter_parliament.pdf`, `results/<dataset>/plots/`, `results/parliament/tables/temporal_comparison_*` |
+
+**Within-sitting contagion (`04_analysis/contagion/`)**
+
+| Script | Description |
+|---|---|
+| `0411_contagion_sequence.py` | Core analysis: speech sequences per sitting, contagion effect (next minus previous speech by another party), k-windows, permutation test, within-speaker models, dose / year / naming splits, party reply network, MdB mention network, example sitting. Tables in `results/parliament/tables/contagion_*.csv`. |
+| `0412_contagion_matching.py`, `0413_contagion_spec_curve.py` | Matched and adjusted estimates of the reaction to an AfD speech (OLS, speaker FE, coarsened exact matching, IPW, nearest neighbour) and a 62-specification curve. |
+| `0414_reply_direction.py` | Within-speaker, position-adjusted reply levels for every ordered party pair (`results/parliament/tables/reply_direction_matrix*.csv`). |
+| `0415`–`0419` | Earlier versions of the local-window analysis, placebo parties, position and climate controls, naming the AfD, share of the 2017 shift attributable to confrontation (`results/revision/12_afd_sequence/`). |
+| `0421_figure_contagion_main.py` | Main-text contagion figure (reply network, k-window effect by party, example sitting). |
+| `0422`–`0426` | Further figures: robustness ladder, network with values, within-speaker matrix / hub, 2000–2025 sequence overview, window effects with permutation distribution. |
+
+**Mechanism tests (`04_analysis/mechanisms/`)**
+
+| Script | Description |
+|---|---|
+| `0431_mechanism_tests.py` | 2021 transition, adoption hazard, long-run drift, similarity to AfD language, debate contact, party wings, 2013 placebo, lead–lag (`results/revision/10_mechanism_tests/`). |
+| `0432_ideology_level_shock.py`, `0433_exposure_finegrained.py`, `0434_build_constituency_exposure.py` | Ideological distance to the AfD (Breunig & Guinaudeau 2025 positions, `data/revision/breunig_guinaudeau/`) and constituency AfD vote share (Bundeswahlleiter `btw17_kerg.csv`, `MDB_STAMMDATEN.XML`) as predictors of the post-2017 shift (`results/revision/09_mechanism_2017/`). |
+| `0435_scrape_kandidierendencheck.py`, `0436_kandidierendencheck_tests.py` | abgeordnetenwatch Kandidierenden-Check thesis answers as an alternative position measure. |
+
+**Validation (`05_validation/`)**
+
+| Script | Description |
+|---|---|
+| `document/0514_validation_correlations.py`, `0515_validation_linke_diagnostics.py`, `0516_lookup_validation_parties.py` | Document-level validation (AUC, correlations) by era and party; diagnostics for the Left (`results/revision/07_validation_auc/`). |
+| `topics/0541_topic_parliament_same_sample.py`, `0542_topic_twitter_same_sample.py` | Topic controls on identical samples, noise cluster kept as its own category (`results/revision/08_topic_controls/`). |
+| `llm/0551`–`0559`, `llm/prompts/` | LLM annotation with Llama 3.1 8B and Qwen 2.5 7B (vLLM): validation against the human ratings, use vs. mention of evidence, other-directed sentences and re-scored EMI, time series on the LLM ratings; see `llm/README.md` (`results/llm/`). |
+| `survey/0561_build_survey_samples.py`, `0562_make_survey_files.py` | Draw the 300 Bundestag passages and 300 tweets of the new validation surveys and write the potato projects in `docs/survey/revision/`. |
+
+The demo (`demo/run_demo.py`, Part 3) contains a reduced version of the composition and before/after analyses.
 
 ---
 

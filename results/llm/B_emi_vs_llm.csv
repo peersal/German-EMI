@@ -1,0 +1,28 @@
+set,rater,embedding,llm,spearman,p,n
+ground truth,Llama,evidence_z,evidenz_basiert,0.2947377974806249,2.5324180258403482e-24,1142
+ground truth,Llama,intuition_z,intuition_basiert,0.3832615088725615,2.889104099852981e-41,1142
+ground truth,Llama,emi,llm_emi,0.5595195767378625,4.652524590810957e-95,1142
+ground truth,Qwen,evidence_z,evidenz_basiert,0.17664402093427017,1.852917615093847e-09,1142
+ground truth,Qwen,intuition_z,intuition_basiert,0.4990553068436787,5.893092778934966e-73,1142
+ground truth,Qwen,emi,llm_emi,0.5538682571350916,8.495776221934891e-93,1142
+ground truth,mean,evidence_z,evidenz_basiert,0.2693473360276778,1.970027302479554e-20,1142
+ground truth,mean,intuition_z,intuition_basiert,0.4871719747245354,4.114094417102725e-69,1142
+ground truth,mean,emi,llm_emi,0.6127769539800836,1.0982421136566487e-118,1142
+"sample, speech-level EMI",Llama,evidence_z_w2vparliament,evidenz_basiert,0.06303986878704877,2.7998418137515857e-10,10000
+"sample, speech-level EMI",Llama,intuition_z_w2vparliament,intuition_basiert,0.2856248335559463,4.84905622812708e-187,10000
+"sample, speech-level EMI",Llama,emi_w2vparliament,llm_emi,0.2632336200795807,3.798517341610846e-158,10000
+"sample, speech-level EMI",Qwen,evidence_z_w2vparliament,evidenz_basiert,0.06429053656956984,1.235486476684693e-10,10000
+"sample, speech-level EMI",Qwen,intuition_z_w2vparliament,intuition_basiert,0.2652262202097372,1.3141081423651642e-160,10000
+"sample, speech-level EMI",Qwen,emi_w2vparliament,llm_emi,0.2973637198962859,2.691801513420481e-203,10000
+"sample, speech-level EMI",mean,evidence_z_w2vparliament,evidenz_basiert,0.06926586335100789,4.089623866056487e-12,10000
+"sample, speech-level EMI",mean,intuition_z_w2vparliament,intuition_basiert,0.30661298438422074,1.178186576439097e-216,10000
+"sample, speech-level EMI",mean,emi_w2vparliament,llm_emi,0.30056005305208033,7.395008900129434e-208,10000
+"sample, chunk-level EMI",Llama,chunk_evidence_z,evidenz_basiert,0.11743286112874664,4.798672320108053e-32,10000
+"sample, chunk-level EMI",Llama,chunk_intuition_z,intuition_basiert,0.39480200887738853,0.0,10000
+"sample, chunk-level EMI",Llama,chunk_emi,llm_emi,0.4108100045405054,0.0,10000
+"sample, chunk-level EMI",Qwen,chunk_evidence_z,evidenz_basiert,0.10759108338520518,3.8759618623290935e-27,10000
+"sample, chunk-level EMI",Qwen,chunk_intuition_z,intuition_basiert,0.41123656733332103,0.0,10000
+"sample, chunk-level EMI",Qwen,chunk_emi,llm_emi,0.4459818029489641,0.0,10000
+"sample, chunk-level EMI",mean,chunk_evidence_z,evidenz_basiert,0.12447756236469996,7.967449724140634e-36,10000
+"sample, chunk-level EMI",mean,chunk_intuition_z,intuition_basiert,0.4470527710237605,0.0,10000
+"sample, chunk-level EMI",mean,chunk_emi,llm_emi,0.4630548815996824,0.0,10000

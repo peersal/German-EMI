@@ -1,0 +1,100 @@
+Source_ID,Date,order,Party,firstName,lastName,emi_w2vparliament,mentions_afd,Agenda,seq
+ID2013300300,2023-11-08,2013300300,CDU/CSU,Dorothee,Bär,0.1413877,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,1
+ID2013300500,2023-11-08,2013300500,CDU/CSU,Dorothee,Bär,-0.9098722,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,2
+ID2013300700,2023-11-08,2013300700,FDP,Jens,Teutrine,0.24485713,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,3
+ID2013300900,2023-11-08,2013300900,FDP,Jens,Teutrine,0.8429518,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,4
+ID2013301100,2023-11-08,2013301100,AfD,René,Springer,1.0516658,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,5
+ID2013301300,2023-11-08,2013301300,AfD,René,Springer,1.9162788,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,6
+ID2013301500,2023-11-08,2013301500,SPD,Rasha,Nasr,-0.12918735,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,7
+ID2013301700,2023-11-08,2013301700,DIE LINKE,Susanne,Ferschl,0.77498376,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,8
+ID2013301900,2023-11-08,2013301900,DIE LINKE,Susanne,Ferschl,-0.1724481,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,9
+ID2013302100,2023-11-08,2013302100,BÜNDNIS 90/DIE GRÜNEN,Frank,Bsirske,1.0957104,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,10
+ID2013302300,2023-11-08,2013302300,BÜNDNIS 90/DIE GRÜNEN,Frank,Bsirske,-0.04452908,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,11
+ID2013302500,2023-11-08,2013302500,CDU/CSU,Silvia,Breher,0.15526986,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,12
+ID2013302700,2023-11-08,2013302700,CDU/CSU,Silvia,Breher,0.46718848,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,13
+ID2013302900,2023-11-08,2013302900,CDU/CSU,Dorothee,Bär,-0.054071754,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,14
+ID2013303100,2023-11-08,2013303100,AfD,Martin,Reichardt,-0.54593456,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,15
+ID2013303300,2023-11-08,2013303300,CDU/CSU,Melanie,Bernstein,0.22697209,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,16
+ID2013303500,2023-11-08,2013303500,FDP,Nicole,Bauer,0.59130204,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,17
+ID2013303700,2023-11-08,2013303700,CDU/CSU,Hendrik,Hoppenstedt,-0.11713301,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,18
+ID2013303900,2023-11-08,2013303900,BÜNDNIS 90/DIE GRÜNEN,Ulle,Schauws,0.9296017,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,19
+ID2013304100,2023-11-08,2013304100,CDU/CSU,Mareike Lotte,Wulf,-0.39605507,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,20
+ID2013304300,2023-11-08,2013304300,FDP,Matthias,Seestern-Pauly,1.2589839,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,21
+ID2013304500,2023-11-08,2013304500,FDP,Matthias,Seestern-Pauly,0.639663,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,22
+ID2013304700,2023-11-08,2013304700,CDU/CSU,Dorothee,Bär,0.22857893,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,23
+ID2013304900,2023-11-08,2013304900,CDU/CSU,Silvia,Breher,0.5658113,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,24
+ID2013305100,2023-11-08,2013305100,SPD,Erik,von Malottki,0.8017126,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,25
+ID2013305300,2023-11-08,2013305300,CDU/CSU,Anne,Janssen,0.2783401,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,26
+ID2013305500,2023-11-08,2013305500,FDP,Gyde,Jensen,-0.6885412,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,27
+ID2013305700,2023-11-08,2013305700,DIE LINKE,Heidi,Reichinnek,0.43702257,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,28
+ID2013305900,2023-11-08,2013305900,SPD,Jasmina,Hostert,1.770658,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,29
+ID2013306100,2023-11-08,2013306100,CDU/CSU,Simone,Borchardt,0.78589296,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,30
+ID2013306300,2023-11-08,2013306300,AfD,Martin,Reichardt,0.4195223,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,31
+ID2013306500,2023-11-08,2013306500,AfD,Martin,Reichardt,-0.8634182,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,32
+ID2013306700,2023-11-08,2013306700,AfD,Beatrix,von Storch,-1.4062707,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,33
+ID2013306900,2023-11-08,2013306900,DIE LINKE,Kathrin,Vogler,-0.18706517,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,34
+ID2013307100,2023-11-08,2013307100,SPD,Daniel,Baldy,-0.65625393,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,35
+ID2013307300,2023-11-08,2013307300,AfD,Gereon,Bollmann,-0.9859326,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,36
+ID2013307500,2023-11-08,2013307500,CDU/CSU,Mareike Lotte,Wulf,0.6193804,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,37
+ID2013307700,2023-11-08,2013307700,AfD,Mariana Iris,Harder-Kühnel,1.5943443,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,38
+ID2013307900,2023-11-08,2013307900,AfD,Stephan,Brandner,-0.88857627,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,39
+ID2013308100,2023-11-08,2013308100,SPD,Bernd,Rützel,0.23178886,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,40
+ID2013308300,2023-11-08,2013308300,BÜNDNIS 90/DIE GRÜNEN,Janosch,Dahmen,1.1459271,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,41
+ID2013308500,2023-11-08,2013308500,CDU/CSU,Kai,Whittaker,1.3091955,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,42
+ID2013308700,2023-11-08,2013308700,FDP,Jens,Teutrine,0.5923643,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,43
+ID2013308900,2023-11-08,2013308900,DIE LINKE,Pascal,Meiser,0.31234407,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,44
+ID2013309100,2023-11-08,2013309100,CDU/CSU,Marc,Biadacz,-0.17945132,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,45
+ID2013309300,2023-11-08,2013309300,AfD,René,Springer,-0.55459553,1,Tagesordnungspunkt 1: Befragung der Bundesregierung,46
+ID2013309500,2023-11-08,2013309500,DIE LINKE,Pascal,Meiser,1.4138095,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,47
+ID2013309700,2023-11-08,2013309700,DIE LINKE,Pascal,Meiser,1.3478407,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,48
+ID2013309900,2023-11-08,2013309900,BÜNDNIS 90/DIE GRÜNEN,Nina,Stahr,-1.2281456,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,49
+ID2013310100,2023-11-08,2013310100,BÜNDNIS 90/DIE GRÜNEN,Nina,Stahr,-0.16993034,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,50
+ID2013310300,2023-11-08,2013310300,CDU/CSU,Marc,Biadacz,-0.28318655,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,51
+ID2013310500,2023-11-08,2013310500,CDU/CSU,Marc,Biadacz,0.014510065,0,Tagesordnungspunkt 1: Befragung der Bundesregierung,52
+ID2013310700,2023-11-08,2013310700,CDU/CSU,Thorsten,Frei,-0.07136324,0,Zusatzpunkt 1: Aktuelle Stunde,53
+ID2013310800,2023-11-08,2013310800,SPD,Dirk,Wiese,-0.731509,0,Zusatzpunkt 1: Aktuelle Stunde,54
+ID2013310900,2023-11-08,2013310900,AfD,Gottfried,Curio,-1.1834743,1,Zusatzpunkt 1: Aktuelle Stunde,55
+ID2013311000,2023-11-08,2013311000,BÜNDNIS 90/DIE GRÜNEN,Lamya,Kaddor,-2.2702146,0,Zusatzpunkt 1: Aktuelle Stunde,56
+ID2013311100,2023-11-08,2013311100,DIE LINKE,Clara,Bünger,-0.28528452,1,Zusatzpunkt 1: Aktuelle Stunde,57
+ID2013311200,2023-11-08,2013311200,FDP,Stephan,Thomae,-0.04091075,0,Zusatzpunkt 1: Aktuelle Stunde,58
+ID2013311300,2023-11-08,2013311300,CDU/CSU,Alexander,Throm,-2.2542787,0,Zusatzpunkt 1: Aktuelle Stunde,59
+ID2013311400,2023-11-08,2013311400,SPD,Sebastian,Hartmann,-1.1110854,0,Zusatzpunkt 1: Aktuelle Stunde,60
+ID2013311500,2023-11-08,2013311500,BÜNDNIS 90/DIE GRÜNEN,Marcel,Emmerich,-1.2602693,0,Zusatzpunkt 1: Aktuelle Stunde,61
+ID2013311600,2023-11-08,2013311600,FDP,Ann-Veruschka,Jurisch,0.34847638,0,Zusatzpunkt 1: Aktuelle Stunde,62
+ID2013311700,2023-11-08,2013311700,CDU/CSU,Alexander,Hoffmann,-1.6860474,0,Zusatzpunkt 1: Aktuelle Stunde,63
+ID2013311800,2023-11-08,2013311800,SPD,Rasha,Nasr,-0.5234445,0,Zusatzpunkt 1: Aktuelle Stunde,64
+ID2013311900,2023-11-08,2013311900,BÜNDNIS 90/DIE GRÜNEN,Robin,Wagener,-2.6824336,0,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,65
+ID2013312000,2023-11-08,2013312000,CDU/CSU,Knut,Abraham,-3.4881124,1,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,66
+ID2013312100,2023-11-08,2013312100,SPD,Johannes,Schraps,-2.8909807,0,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,67
+ID2013312200,2023-11-08,2013312200,AfD,Eugen,Schmidt,-2.912885,1,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,68
+ID2013312300,2023-11-08,2013312300,FDP,Anikó,Glogowski-Merten,-1.7510031,0,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,69
+ID2013312400,2023-11-08,2013312400,DIE LINKE,Kathrin,Vogler,-2.3483877,0,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,70
+ID2013312500,2023-11-08,2013312500,SPD,Luiza,Licina-Bode,-1.8482277,0,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,71
+ID2013312700,2023-11-08,2013312700,CDU/CSU,Thomas,Silberhorn,-2.708383,0,Tagesordnungspunkt 3: Für ein demokratisches Belarus in der europäischen Familie | Belarus in die europäische Völkerfamilie zurückführen – Den Freiheitswillen der Menschen unterstützen,72
+ID2013312800,2023-11-08,2013312800,CDU/CSU,Antje,Tillmann,1.3928053,0,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,73
+ID2013312900,2023-11-08,2013312900,SPD,Jens,Zimmermann,0.052654564,1,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,74
+ID2013313000,2023-11-08,2013313000,AfD,Jörn,König,-0.35004124,1,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,75
+ID2013313100,2023-11-08,2013313100,BÜNDNIS 90/DIE GRÜNEN,Sabine,Grützmacher,1.1757928,1,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,76
+ID2013313200,2023-11-08,2013313200,DIE LINKE,Christian,Görke,0.43116143,0,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,77
+ID2013313300,2023-11-08,2013313300,FDP,Volker,Redder,0.7190243,1,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,78
+ID2013313400,2023-11-08,2013313400,CDU/CSU,Matthias,Hauer,0.7638264,0,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,79
+ID2013313500,2023-11-08,2013313500,SPD,Nadine,Heselhaus,-0.38274026,1,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,80
+ID2013313700,2023-11-08,2013313700,CDU/CSU,Alois,Rainer,-0.8423933,0,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,81
+ID2013313900,2023-11-08,2013313900,SPD,Armand,Zorn,-0.5604667,0,Tagesordnungspunkt 14: a) Beratung des Antrags der Fraktion der CDU/CSU,82
+ID2013314100,2023-11-08,2013314100,CDU/CSU,Martin,Plum,2.524218,0,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,83
+ID2013314200,2023-11-08,2013314200,SPD,Esra,Limbacher,0.3905353,1,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,84
+ID2013314300,2023-11-08,2013314300,AfD,Tobias Matthias,Peterka,-0.5481483,1,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,85
+ID2013314400,2023-11-08,2013314400,BÜNDNIS 90/DIE GRÜNEN,Lukas,Benner,0.4916374,0,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,86
+ID2013314500,2023-11-08,2013314500,DIE LINKE,Susanne,Hennig-Wellsow,0.67577773,0,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,87
+ID2013314600,2023-11-08,2013314600,SPD,Zanda,Martens,0.6988896,0,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,88
+ID2013314700,2023-11-08,2013314700,CDU/CSU,Volker,Ullrich,-0.49589574,0,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,89
+ID2013314800,2023-11-08,2013314800,BÜNDNIS 90/DIE GRÜNEN,Maik,Außendorf,1.6132617,0,Tagesordnungspunkt 5: Sonderbericht der Bundesregierung – Bessere Rechtsetzung und Bürokratieabbau in der 20. Legislaturperiode,90
+ID2013314900,2023-11-08,2013314900,AfD,Enrico,Komning,-0.16454197,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,91
+ID2013315000,2023-11-08,2013315000,SPD,Alexander,Bartz,1.8876424,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,92
+ID2013315100,2023-11-08,2013315100,CDU/CSU,Klaus-Peter,Willsch,-0.40637606,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,93
+ID2013315200,2023-11-08,2013315200,BÜNDNIS 90/DIE GRÜNEN,Felix,Banaszak,-2.112293,0,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,94
+ID2013315300,2023-11-08,2013315300,DIE LINKE,Bernd,Riexinger,-0.61557543,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,95
+ID2013315400,2023-11-08,2013315400,FDP,Manfred,Todtenhausen,2.1223903,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,96
+ID2013315500,2023-11-08,2013315500,SPD,Markus,Hümpfer,-0.4439019,0,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,97
+ID2013315600,2023-11-08,2013315600,CDU/CSU,Martin,Plum,-0.9903411,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,98
+ID2013315700,2023-11-08,2013315700,SPD,Takis,Mehmet Ali,0.27149668,1,Tagesordnungspunkt 6: Deindustrialisierung stoppen – Unternehmen und Bürger mit Bürokratieabbau entlasten,99

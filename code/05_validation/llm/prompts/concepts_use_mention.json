@@ -1,0 +1,7 @@
+{
+    "evidence_use":      {"definition": "Der Sprecher verwendet selbst Evidenz: Zahlen, Daten, Studien, Gutachten, Gesetzesstellen, Expertenbefunde oder eine nachvollziehbare Ursache-Wirkungs-Begruendung."},
+    "evidence_mention":  {"definition": "Der Sprecher spricht ueber Evidenz, Fakten, Wissenschaft, Experten oder Wissen als Thema, ohne selbst einen Beleg zu liefern."},
+    "intuition_use":     {"definition": "Der Sprecher argumentiert selbst aus Gefuehl, Ueberzeugung, gesundem Menschenverstand, Werten, Anekdoten oder dem Offensichtlichen."},
+    "intuition_mention": {"definition": "Der Sprecher spricht ueber Bauchgefuehl, Stimmungen, Aengste oder Ueberzeugungen anderer als Thema, ohne selbst so zu argumentieren."},
+    "procedural":        {"definition": "Der Text ist ueberwiegend Verfahrens- oder Metasprache ohne inhaltliche Argumentation."}
+}

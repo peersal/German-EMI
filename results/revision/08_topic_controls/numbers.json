@@ -1,0 +1,143 @@
+{
+ "parliament": {
+  "n_with_topics": 56213,
+  "n_baseline": 59170,
+  "noise_share": 0.42926013555583226,
+  "by_party": {
+   "AFD": 0.457,
+   "Alliance 90/The Greens": 0.419,
+   "BSW": 0.373,
+   "CDU/CSU": 0.397,
+   "FDP": 0.433,
+   "SPD": 0.465,
+   "The Left Party": 0.419
+  },
+  "by_period": {
+   "2015\u20132017": 0.429,
+   "2018\u20132021": 0.422,
+   "2022\u20132025": 0.436
+  },
+  "emi_noise": -0.07826002110121312,
+  "emi_assigned": 0.040202187106962314
+ },
+ "parliament_models": {
+  "constrained|all|baseline": {
+   "n": 53252,
+   "group_var": 0.3899151618771265,
+   "converged": true,
+   "level2017": -0.4002887951551878,
+   "level2021": -0.2032515294498672,
+   "level2025": -0.5000744880022527,
+   "slope2021": -0.007448437779145
+  },
+  "constrained|all|topicFE_noise_kept": {
+   "n": 53252,
+   "group_var": 0.2841322405478282,
+   "converged": true,
+   "level2017": -0.3741471345979291,
+   "level2021": -0.1578541550433375,
+   "level2025": -0.4977921931726039,
+   "slope2021": -0.005178428270896
+  },
+  "constrained|no_noise|baseline": {
+   "n": 29915,
+   "group_var": 0.4324992759159067,
+   "converged": true,
+   "level2017": -0.349000672183496,
+   "level2021": -0.2485222049358456,
+   "level2025": -0.3959694509807043,
+   "slope2021": -0.0031291450083519
+  },
+  "constrained|no_noise|topicFE": {
+   "n": 29915,
+   "group_var": 0.2444384542557603,
+   "converged": true,
+   "level2017": -0.2972549196383526,
+   "level2021": -0.1605048531010874,
+   "level2025": -0.3658741062565515,
+   "slope2021": 0.0002288157324262
+  },
+  "full|all|baseline": {
+   "n": 53252,
+   "group_var": 0.3912813054070187,
+   "converged": true,
+   "level2017": -0.4013719677740607,
+   "level2021": -0.2131177216825793,
+   "level2025": -0.4877709877128375,
+   "slope2021": -0.0064092197634974
+  },
+  "full|all|topicFE_noise_kept": {
+   "n": 53252,
+   "group_var": 0.2850705510358262,
+   "converged": true,
+   "level2017": -0.3706084421676618,
+   "level2021": -0.1670030921841787,
+   "level2025": -0.4845014552522114,
+   "slope2021": -0.0043952145257381
+  },
+  "full|no_noise|baseline": {
+   "n": 29915,
+   "group_var": 0.4338511355365372,
+   "converged": true,
+   "level2017": -0.342502256401914,
+   "level2021": -0.2614657968949514,
+   "level2025": -0.4231520047024431,
+   "slope2021": -0.0027381828744952
+  },
+  "full|no_noise|topicFE": {
+   "n": 29915,
+   "group_var": 0.2451589530649592,
+   "converged": true,
+   "level2017": -0.2849983738038663,
+   "level2021": -0.1744073956392857,
+   "level2025": -0.3838063423025741,
+   "slope2021": 0.0002288125885051
+  }
+ },
+ "twitter_models": {
+  "all|baseline": {
+   "Intercept": 0.04986,
+   "leaning[T.left]": 0.00142,
+   "leaning[T.right]": -0.11071,
+   "time_centered": -0.00059,
+   "time_centered:leaning[T.left]": -4e-05,
+   "time_centered:leaning[T.right]": 0.00102,
+   "log_like_count": -0.03987,
+   "emi_lag1": 0.49513,
+   "Group Var": 0.07494
+  },
+  "all|topicFE_noise_kept": {
+   "Intercept": 0.02203,
+   "leaning[T.left]": 0.00479,
+   "leaning[T.right]": -0.11029,
+   "time_centered": -0.00069,
+   "time_centered:leaning[T.left]": -4e-05,
+   "time_centered:leaning[T.right]": 0.00105,
+   "log_like_count": -0.04317,
+   "emi_lag1": 0.46272,
+   "Group Var": 0.07517
+  },
+  "no_noise|baseline": {
+   "Intercept": 0.07161,
+   "leaning[T.left]": -0.0001,
+   "leaning[T.right]": -0.13063,
+   "time_centered": -0.00045,
+   "time_centered:leaning[T.left]": 3e-05,
+   "time_centered:leaning[T.right]": 0.00091,
+   "log_like_count": -0.0371,
+   "emi_lag1": 0.41592,
+   "Group Var": 0.02882
+  },
+  "no_noise|topicFE": {
+   "Intercept": 0.01213,
+   "leaning[T.left]": 0.00752,
+   "leaning[T.right]": -0.1284,
+   "time_centered": -0.00074,
+   "time_centered:leaning[T.left]": 9e-05,
+   "time_centered:leaning[T.right]": 0.001,
+   "log_like_count": -0.04281,
+   "emi_lag1": 0.35545,
+   "Group Var": 0.02633
+  }
+ }
+}

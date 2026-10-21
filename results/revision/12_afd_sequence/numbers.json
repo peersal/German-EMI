@@ -1,0 +1,83 @@
+{
+ "local_window_k1_afd": -0.092,
+ "local_window_k1_placebo_mean": 0.029,
+ "afd_minus_placebo": {
+  "k1": -0.122,
+  "k2": -0.091,
+  "k3": -0.069,
+  "k5": -0.046
+ },
+ "position_matched_item_fe": {
+  "diff1": -0.091,
+  "diff1_se": 0.02,
+  "diff2": -0.054,
+  "diff2_se": 0.015
+ },
+ "low_emi_speech_placebo": {
+  "afd": -0.224,
+  "cdu_csu": 0.091,
+  "spd": 0.132,
+  "greens": 0.06,
+  "fdp": 0.04,
+  "left": -0.087,
+  "item_fe_afd_x_low": -0.254
+ },
+ "reply_by_mention": {
+  "mentions_afd": {
+   "diff1": -0.399,
+   "n": 1316,
+   "emi": -0.52
+  },
+  "no_mention": {
+   "diff1": -0.014,
+   "n": 5162,
+   "emi": 0.017
+  }
+ },
+ "mention_effect_speaker_fe": {
+  "AfD": -0.505,
+  "CDU/CSU": -0.294,
+  "SPD": -0.305,
+  "FDP": -0.235,
+  "Greens": -0.269,
+  "Left": -0.182,
+  "joint_afd": -0.47
+ },
+ "share_non_afd_speeches_mentioning_afd_by_year": {
+  "2015": 0.009,
+  "2016": 0.019,
+  "2017": 0.041,
+  "2018": 0.227,
+  "2019": 0.217,
+  "2020": 0.186,
+  "2021": 0.157,
+  "2022": 0.108,
+  "2023": 0.133,
+  "2024": 0.168,
+  "2025": 0.266
+ },
+ "level_shift_2017": {
+  "baseline_RI": -0.421,
+  "with_mention_control_RI": -0.292,
+  "baseline_FE": -0.438,
+  "with_mention_control_FE": -0.309,
+  "not_mentioning_FE": -0.347,
+  "non_afd_not_mentioning_FE": -0.347
+ },
+ "level_shift_2021": {
+  "baseline_FE": -0.222,
+  "not_mentioning_FE": -0.298
+ },
+ "level_shift_2025": {
+  "baseline_FE": -0.503,
+  "not_mentioning_FE": -0.352
+ },
+ "dose": {
+  "most_intuitive_afd_speech": -0.224,
+  "q2": -0.143,
+  "q3": -0.077,
+  "most_evidence_based": 0.074,
+  "slope_per_emi_unit": 0.089,
+  "slope_se": 0.014
+ }
+}

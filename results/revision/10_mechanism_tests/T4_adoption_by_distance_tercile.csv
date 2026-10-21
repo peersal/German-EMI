@@ -1,0 +1,13 @@
+party,tercile,n,share_adopted,median_quarters
+CDU/CSU,close,32,0.72,1.0
+CDU/CSU,middle,40,0.8,1.0
+CDU/CSU,far,35,0.77,1.0
+Greens,close,14,0.86,1.0
+Greens,middle,17,0.88,1.0
+Greens,far,17,0.88,1.0
+Left,close,12,0.67,1.0
+Left,middle,8,0.62,1.0
+Left,far,18,0.89,1.0
+SPD,close,33,0.85,1.0
+SPD,middle,31,0.9,1.0
+SPD,far,23,0.7,1.0

@@ -34,7 +34,7 @@ the main repository.
 |---|---|
 | `demo_data.csv` | 2,932 Bundestag speeches (2015–2025) by 40 randomly sampled politicians, stratified by ideological leaning. Columns: `id`, `date`, `politicianId`, `party`, `leaning`, `emi_w2vparliament` (precomputed EMI score). Speech texts are omitted; the underlying plenary protocols are publicly available from the Bundestag document server. |
 | `demo_data_twitter.csv` | 6,000 tweets (2015–2025) by 40 randomly sampled politician accounts, stratified by leaning. Columns: `id` (tweet ID), `actor` (pseudonymised account code), `date`, `party`, `leaning`, `emi_w2vparliament`. In line with the X Developer Agreement, **only tweet IDs are shared** — no tweet text, no user names, no raw author IDs, no engagement counts. Tweets can be rehydrated from their IDs via the X API. |
-| `run_demo.py` | Self-contained demo script: builds the lagged quarterly autoregressive term and (for the Bundestag) the election-breakpoint regressors, fits both mixed models, writes outputs. |
+| `run_demo.py` | Self-contained demo script: builds the lagged quarterly autoregressive term and (for the Bundestag) the election-breakpoint regressors, fits both mixed models, writes outputs; Part 3 adds the composition (stayers / entrants / leavers) and before/after-AfD-entry analyses of the revision. |
 | `requirements.txt` | Python dependencies. |
 
 ## 1. System requirements
@@ -97,15 +97,42 @@ overall time trend (≈ −0.003 per quarter, *P* < 0.001). Exact values
 will differ from the paper, which uses all 59,170 speeches and 4.5
 million tweets; coefficient signs and the general pattern should match.
 
+**Part 3 (added in the 2026 revision).** The script then runs two
+descriptive analyses of the revision on the same demo files and writes
+`composition_before_after.txt` and `composition_parliament.png`:
+
+- *Composition of the post-2017 shift* (Bundestag): politicians are
+  split into stayers (speeches before and after the AfD's entry on
+  2017-10-24), entrants and leavers; the change in mean EMI is
+  decomposed into the stayers' own change and the composition part, and
+  the paired within-politician change of the stayers is reported with a
+  bootstrap CI and by party (full version:
+  `code/04_analysis/0405_composition_stayers.py`).
+- *Before/after the AfD's entry* (both corpora): document-level EMI
+  before vs. after 2017-10-24 with bootstrap CIs of the means, a Welch
+  t-test and Cohen's d (full version: `0406_run_figure_cells.py split`).
+
+Expected output on the demo files: 17 stayers, 22 entrants, 1 leaver;
+entrants hold ≈ 60% of the speeches after the entry; the paired
+within-politician change of the stayers is ≈ −0.46 (95% CI −0.80 to
+−0.16, 76% of stayers decline), i.e. the drop is not only compositional.
+Before/after: Bundestag ≈ +0.64 to −0.07 (*d* ≈ −0.59), Twitter ≈ +0.11
+to −0.01 (*d* ≈ −0.16). In the full data the stayers' share of the total
+change is larger (83%) and the effect sizes are smaller (Bundestag
+*d* = −0.35, Twitter *d* = −0.10); the signs match.
+
 **Expected run time** on a normal desktop computer: < 5 seconds
-(1.0 s for both parts on the test machine).
+(1.4 s for all three parts on the test machine).
 
 ## 4. Instructions for use
 
 To run the analysis on the full data, obtain the complete datasets from
-the OSF repository referenced in the paper (`https://osf.io/x3zpc/`) and
-use the main analysis notebook (`analysis.ipynb`) in the repository
-root. The notebook expects CSV files with, at minimum, the columns used
+the OSF repository referenced in the paper (`https://osf.io/8tk9q/`),
+place them in `data/` in the repository root and use the main analysis
+notebook `code/04_analysis/0403_analysis.ipynb`; the revision analyses
+(2000–2025 extension, composition, within-sitting contagion, LLM
+annotation) are in `0404_revision_analysis.ipynb` and the scripts listed
+in the main README. The notebook expects CSV files with, at minimum, the columns used
 here (date, actor identifier, `party`, `leaning`, and an EMI score
 column) and reproduces all models, tables and figures of the paper: the
 baseline linear model (Twitter), the constrained and leaning-interacted
@@ -125,7 +152,7 @@ files.
    train/fine-tune the word2vec models and apply the DDR scoring
    pipeline as described in the paper's Methods and Supplementary
    Note 2.
-3. Run `analysis.ipynb` top to bottom; per-dataset outputs (model
+3. Run `code/04_analysis/0403_analysis.ipynb` top to bottom; per-dataset outputs (model
    pickles, LaTeX tables, figures) are written to `results/<dataset>/`.
    Fitting the full Bundestag breakpoint models takes a few minutes;
    the Twitter models (6.2 M tweets) take on the order of 30–60 minutes
