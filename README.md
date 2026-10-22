@@ -229,6 +229,17 @@ Analyses added in the revision of the paper. All scripts run from the repository
 | `topics/0541_topic_parliament_same_sample.py`, `0542_topic_twitter_same_sample.py` | Topic controls on identical samples, noise cluster kept as its own category (`results/revision/08_topic_controls/`). |
 | `llm/0551`–`0559`, `llm/prompts/` | LLM annotation with Llama 3.1 8B and Qwen 2.5 7B (vLLM): validation against the human ratings, use vs. mention of evidence, other-directed sentences and re-scored EMI, time series on the LLM ratings; see `llm/README.md` (`results/llm/`). |
 | `survey/0561_build_survey_samples.py`, `0562_make_survey_files.py` | Draw the 300 Bundestag passages and 300 tweets of the new validation surveys and write the potato projects in `docs/survey/revision/`. |
+| `document/0517_validation_2026.py` + `document/data_2026/` | Document-level validation of the dictionary EMI against the human ratings of the 2024 survey (1,142 chunks, all eras), the 2026 Bundestag survey (300 chunks, 2015–2025) and the 2026 Twitter survey (300 tweets): AUC and Spearman ρ pooled, by era / period and by party, inter-rater reliability, LLM composite on the same items, annotator demographics. `data_2026/` holds the anonymised ground truth (item means, single ratings with sequential rater codes, no Prolific ids, no tweet texts); outputs in `results/validation_2026/`. |
+| `llm/0571_build_survey_input.py`, `0572_analyze_survey.py` | LLM ratings of the 600 survey items of 2026 and their agreement with the human ratings (`results/llm/survey2026/`). |
+
+**Words and elections (`04_analysis/words/`, `04_analysis/elections/`)**
+
+| Script | Description |
+|---|---|
+| `words/0451_word_influence.py` | Word-level contributions to the DDR EMI per party (or camp) and period: word score $s_w$ = cosine to the evidence minus cosine to the intuition dictionary, token shares, word-shift contributions (`results/word_influence/`; `WI_GROUP=leaning WI_WINDOWS=biennial` for the timeline). |
+| `words/0452_figure_word_influence.py`, `0453_figure_word_timeline.py` | Figures: most influential evidence- and intuition-type words per party and period, and the timeline per camp with callouts. |
+| `elections/0461_breakpoint7_by_party.py` | Seven-election breakpoint model and pre/post comparison per party, Bundestag 2000–2025 (`results/revision/02_pre2015/breakpoint7_by_party.csv`). |
+| `elections/0462_figure_afd_entry_supp.py` | Supplementary figures on the 2017 election: rolling series 2000–2025, level shifts at the seven elections, single-break search against placebo breaks, recovery in event time. |
 
 The demo (`demo/run_demo.py`, Part 3) contains a reduced version of the composition and before/after analyses.
 

@@ -1,0 +1,3 @@
+survey,n_participants,n_raters_in_export,age_mean,age_sd,age_min,age_max,female,male,other_sex,residence_germany,nationality_german,language_german,students,employed_full_time,employed_part_time,time_median_min,time_min_min,time_max_min
+Bundestag 2026,73,76,36.83561643835616,11.491559340361924,18,67,17,56,0,73,73,73,19,38,8,9.733333333333333,1.6,31.933333333333334
+Twitter 2026,80,81,33.675,10.653073485316071,18,74,17,63,0,80,80,80,24,38,12,8.1,3.2333333333333334,26.3

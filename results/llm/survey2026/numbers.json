@@ -1,0 +1,162 @@
+{
+ "parliament|Llama|evidence": {
+  "spearman": 0.569,
+  "auc": 0.78,
+  "n": 271
+ },
+ "parliament|Llama|intuition": {
+  "spearman": 0.463,
+  "auc": 0.785,
+  "n": 265
+ },
+ "parliament|Llama|EMI": {
+  "spearman": 0.568,
+  "auc": 0.806,
+  "n": 283
+ },
+ "parliament|Qwen|evidence": {
+  "spearman": 0.561,
+  "auc": 0.758,
+  "n": 271
+ },
+ "parliament|Qwen|intuition": {
+  "spearman": 0.524,
+  "auc": 0.814,
+  "n": 265
+ },
+ "parliament|Qwen|EMI": {
+  "spearman": 0.59,
+  "auc": 0.777,
+  "n": 283
+ },
+ "parliament|mean of both|EMI": {
+  "spearman": 0.625,
+  "auc": 0.821,
+  "n": 283
+ },
+ "parliament|inter-model|EMI": {
+  "spearman": 0.693,
+  "auc": null,
+  "n": 290
+ },
+ "parliament|LLM mean vs dictionary|EMI": {
+  "spearman": 0.428,
+  "auc": null,
+  "n": 290
+ },
+ "parliament|dictionary EMI|EMI": {
+  "spearman": 0.422,
+  "auc": 0.724,
+  "n": 283
+ },
+ "parliament|by party: AFD|EMI": {
+  "spearman": null,
+  "auc": 0.885,
+  "n": 77
+ },
+ "parliament|by party: Alliance 90/The Greens|EMI": {
+  "spearman": null,
+  "auc": 0.844,
+  "n": 53
+ },
+ "parliament|by party: CDU/CSU|EMI": {
+  "spearman": null,
+  "auc": 0.905,
+  "n": 19
+ },
+ "parliament|by party: FDP|EMI": {
+  "spearman": null,
+  "auc": 0.792,
+  "n": 49
+ },
+ "parliament|by party: SPD|EMI": {
+  "spearman": null,
+  "auc": 0.776,
+  "n": 19
+ },
+ "parliament|by party: The Left Party|EMI": {
+  "spearman": null,
+  "auc": 0.719,
+  "n": 73
+ },
+ "twitter|Llama|evidence": {
+  "spearman": 0.21,
+  "auc": 0.656,
+  "n": 275
+ },
+ "twitter|Llama|intuition": {
+  "spearman": 0.351,
+  "auc": 0.711,
+  "n": 296
+ },
+ "twitter|Llama|EMI": {
+  "spearman": 0.303,
+  "auc": 0.69,
+  "n": 282
+ },
+ "twitter|Qwen|evidence": {
+  "spearman": 0.408,
+  "auc": 0.718,
+  "n": 275
+ },
+ "twitter|Qwen|intuition": {
+  "spearman": 0.3,
+  "auc": 0.72,
+  "n": 296
+ },
+ "twitter|Qwen|EMI": {
+  "spearman": 0.407,
+  "auc": 0.719,
+  "n": 282
+ },
+ "twitter|mean of both|EMI": {
+  "spearman": 0.425,
+  "auc": 0.759,
+  "n": 282
+ },
+ "twitter|inter-model|EMI": {
+  "spearman": 0.412,
+  "auc": null,
+  "n": 300
+ },
+ "twitter|LLM mean vs dictionary|EMI": {
+  "spearman": 0.272,
+  "auc": null,
+  "n": 300
+ },
+ "twitter|dictionary EMI|EMI": {
+  "spearman": 0.363,
+  "auc": 0.663,
+  "n": 282
+ },
+ "twitter|by party: AFD|EMI": {
+  "spearman": null,
+  "auc": 0.699,
+  "n": 50
+ },
+ "twitter|by party: Alliance 90/The Greens|EMI": {
+  "spearman": null,
+  "auc": 0.617,
+  "n": 50
+ },
+ "twitter|by party: CDU/CSU|EMI": {
+  "spearman": null,
+  "auc": 0.761,
+  "n": 50
+ },
+ "twitter|by party: FDP|EMI": {
+  "spearman": null,
+  "auc": 0.685,
+  "n": 50
+ },
+ "twitter|by party: SPD|EMI": {
+  "spearman": null,
+  "auc": 0.864,
+  "n": 50
+ },
+ "twitter|by party: The Left Party|EMI": {
+  "spearman": null,
+  "auc": 0.795,
+  "n": 50
+ }
+}

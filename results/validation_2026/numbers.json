@@ -1,0 +1,81 @@
+{
+ "auc_2024_majority_label": 0.714914317302377,
+ "agreement_parliament_2026": {
+  "n_items": 290,
+  "n_raters": 76,
+  "n_ratings": 1445,
+  "icc": {
+   "evidence_rating": {
+    "icc1": 0.2687427876550556,
+    "icc1k": 0.6467932605907324,
+    "k": 4.982758620689655
+   },
+   "intuition_rating": {
+    "icc1": 0.1848164220027573,
+    "icc1k": 0.5304456277412998,
+    "k": 4.982758620689655
+   },
+   "emi": {
+    "icc1": 0.2839556349279784,
+    "icc1k": 0.6639751394098341,
+    "k": 4.982758620689655
+   }
+  },
+  "modal_agreement": {
+   "evidence_rating": 0.5331034482758622,
+   "intuition_rating": 0.544080459770115
+  },
+  "binary_agreement": {
+   "evidence_rating": 0.7778160919540229,
+   "intuition_rating": 0.751551724137931
+  },
+  "within_response_r": -0.5599521112540494,
+  "share_evidence": 0.27666666666666667,
+  "share_intuition": 0.6666666666666666
+ },
+ "agreement_twitter_2026": {
+  "n_items": 300,
+  "n_raters": 81,
+  "n_ratings": 1600,
+  "icc": {
+   "evidence_rating": {
+    "icc1": 0.2745364018507052,
+    "icc1k": 0.6685477810338419,
+    "k": 5.33
+   },
+   "intuition_rating": {
+    "icc1": 0.21764925383687206,
+    "icc1k": 0.5973794879522198,
+    "k": 5.333333333333333
+   },
+   "emi": {
+    "icc1": 0.3041252445262659,
+    "icc1k": 0.6996477724070974,
+    "k": 5.33
+   }
+  },
+  "modal_agreement": {
+   "evidence_rating": 0.5239444444444444,
+   "intuition_rating": 0.5723333333333332
+  },
+  "binary_agreement": {
+   "evidence_rating": 0.7904999999999999,
+   "intuition_rating": 0.7889999999999999
+  },
+  "within_response_r": -0.5780997826283488,
+  "share_evidence": 0.13333333333333333,
+  "share_intuition": 0.8066666666666666
+ },
+ "n": {
+  "Bundestag 2024": 1144,
+  "Bundestag 2026": 300,
+  "Bundestag pooled": 1444,
+  "Twitter 2026": 300
+ },
+ "rho_llm_vs_dictionary": {
+  "Bundestag 2024": 0.6110721868397917,
+  "Bundestag 2026": 0.413829782151305,
+  "Bundestag pooled": 0.5761696749803941,
+  "Twitter 2026": 0.2715173194333953
+ }
+}
