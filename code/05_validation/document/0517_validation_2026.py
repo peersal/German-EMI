@@ -49,6 +49,18 @@ def export():
         rid = {u: f'r{i + 1:03d}' for i, u in enumerate(sorted(a.user_id.unique()))}          # anonymised rater ids (no Prolific ids)
         a['rater'] = a.user_id.map(rid)
         a[['instance_id', 'rater', 'ev', 'iu']].rename(columns={'instance_id': 'id', 'ev': 'evidence_rating', 'iu': 'intuition_rating'}).sort_values(['id', 'rater']).to_csv(os.path.join(DATA, f'ratings_{corpus}_2026.csv'), index=False)
+        # gold (attention) items per rater, judged by direction (evidence item: evidence >= +1 and intuition <= -1; intuition item the reverse)
+        qc = json.load(open(os.path.join(P, 'quality_control_results.json'), encoding='utf-8')).get('gold_results', {})
+        gq = []
+        for u, rs in qc.items():
+            if u not in rid: continue
+            ok = []
+            for r in rs:
+                ur = r['user_response']; e, i = LIK.get(ur.get('Rating:Evidenz basiert'), np.nan), LIK.get(ur.get('Rating:Intuition basiert'), np.nan)
+                ok.append(bool((e >= 1 and i <= -1) if 'evidence' in r['item_id'] else (e <= -1 and i >= 1)))
+            gq.append(dict(rater=rid[u], gold_shown=len(ok), gold_passed=int(sum(ok))))
+        n_items = a.groupby('rater').size().rename('n_items')
+        pd.DataFrame(gq).set_index('rater').join(n_items, how='outer').fillna({'gold_shown': 0, 'gold_passed': 0}).astype(int).reset_index().sort_values('rater').to_csv(os.path.join(DATA, f'rater_quality_{corpus}_2026.csv'), index=False)
         h = a.groupby('instance_id').agg(ev_mean=('ev', 'mean'), iu_mean=('iu', 'mean'), n_raters=('ev', 'size')).reset_index()
         cols = ['id'] + textcols + [c for c in ['speech_id', 'chunk_idx', 'tweet_id', 'party', 'leaning', 'date', 'electoralTerm', 'n_words', 'emi', 'speech_emi'] if c in key.columns]
         k = key[cols].merge(h, left_on='id', right_on='instance_id', how='left').drop(columns=['instance_id'])
@@ -64,6 +76,7 @@ def export():
         '| `ratings_parliament_2026.csv` | the single ratings of the 2026 Bundestag survey (anonymised rater id, evidence and intuition rating) |\n'
         '| `groundtruth_twitter_2026.csv` | 300 tweets of the 2026 survey: tweet id, party, date, dictionary EMI, mean human ratings (no tweet text, in line with the X Developer Agreement) |\n'
         '| `ratings_twitter_2026.csv` | the single ratings of the 2026 Twitter survey (anonymised rater id) |\n'
+        '| `rater_quality_*_2026.csv` | per anonymised rater: items rated, gold (attention) items shown and passed by direction; raters who failed all their gold items are excluded in the analysis |\n'
         '| `llm_parliament_2024.csv`, `llm_2026.csv` | ratings of Llama 3.1 8B and Qwen 2.5 7B on the same items (evidence, intuition, 0–4) |\n\n'
         'Rater ids are sequential codes; Prolific ids, demographics and timing data are not included.\n')
     print('exported to', DATA)
@@ -109,6 +122,19 @@ def analyze():
     p24 = pd.read_csv(os.path.join(DATA, 'groundtruth_parliament_2024.csv'), dtype={'id': str}); p24['set'] = 'Bundestag 2024'
     p26 = pd.read_csv(os.path.join(DATA, 'groundtruth_parliament_2026.csv'), dtype={'id': str}); p26['set'] = 'Bundestag 2026'
     t26 = pd.read_csv(os.path.join(DATA, 'groundtruth_twitter_2026.csv'), dtype={'id': str}); t26['set'] = 'Twitter 2026'
+    # attention check: drop raters who failed all their gold items (VAL_EXCLUDE=none keeps everyone, any_failed drops raters with one failure)
+    EXCL = os.environ.get('VAL_EXCLUDE', 'all_failed'); NUM = {'exclusion_rule': EXCL, 'exclusion': {}}
+    for corpus, d in (('parliament', p26), ('twitter', t26)):
+        R = pd.read_csv(os.path.join(DATA, f'ratings_{corpus}_2026.csv'), dtype={'id': str}); Q = pd.read_csv(os.path.join(DATA, f'rater_quality_{corpus}_2026.csv'))
+        bad = set() if EXCL == 'none' else set(Q[(Q.gold_shown > 0) & ((Q.gold_passed == 0) if EXCL == 'all_failed' else (Q.gold_passed < Q.gold_shown))].rater)
+        all_h = R.groupby('id').agg(ev_all=('evidence_rating', 'mean'), iu_all=('intuition_rating', 'mean'))
+        Rk = R[~R.rater.isin(bad)]; h = Rk.groupby('id').agg(ev_mean=('evidence_rating', 'mean'), iu_mean=('intuition_rating', 'mean'), n_raters=('evidence_rating', 'size'))
+        d.drop(columns=['ev_mean', 'iu_mean', 'n_raters'], inplace=True)
+        d['ev_mean'] = d.id.map(h.ev_mean); d['iu_mean'] = d.id.map(h.iu_mean); d['n_raters'] = d.id.map(h.n_raters)
+        d['human_emi_all'] = d.id.map(all_h.ev_all) - d.id.map(all_h.iu_all)
+        NUM['exclusion'].setdefault('_bad', {})[corpus] = sorted(bad)
+        NUM['exclusion'][corpus] = dict(raters_total=int(Q.rater.nunique()), raters_excluded=len(bad), ratings_kept=int(len(Rk)), ratings_total=int(len(R)), items_rated=int(h.index.nunique()),
+                                        mean_raters=float(h.n_raters.mean()), items_with_5=int((h.n_raters >= 5).sum()), items_with_lt3=int((h.n_raters < 3).sum()))
     for d in (p24, p26, t26):
         d['human_emi'] = d.ev_mean - d.iu_mean; d['party_s'] = d.party.map(PARTY).fillna('Other')
     p26['date'] = pd.to_datetime(p26.date, utc=True); p26['year'] = p26.date.dt.year; p26['era'] = '2015–2025'
@@ -122,7 +148,7 @@ def analyze():
         d['llm_emi'] = d.id.map(l[~l.index.duplicated()].llm_emi) if l is not None else np.nan
     pool = pd.concat([p24, p26], ignore_index=True)
     sets = {'Bundestag 2024': p24, 'Bundestag 2026': p26, 'Bundestag pooled': pool, 'Twitter 2026': t26}
-    NUM = {}; rows = []
+    rows = []
 
     def add(setname, group, d, extra=''):
         for meas, col in [('dictionary EMI', 'emi'), ('LLM composite', 'llm_emi')] + ([('evidence score', 'evidence_z'), ('intuition score', 'intuition_z')] if 'evidence_z' in d.columns and setname != 'Bundestag pooled' else []):
@@ -134,6 +160,8 @@ def analyze():
     # ---- pooled, by era / period, by party
     for name, d in sets.items():
         add(name, 'all', d)
+        if 'human_emi_all' in d.columns:
+            a_, lo_, hi_, n_ = auc_ci(d.emi, np.sign(d.human_emi_all)); rows.append(dict(set=name, group='all (all raters)', measure='dictionary EMI', n=n_, pos_rate=float((d.human_emi_all > 0).mean()), auc=a_, lo=lo_, hi=hi_, rho=rho(d.emi, d.human_emi_all)))
         if name == 'Bundestag pooled':
             for era, g in d.groupby('era'): add(name, era, g)
             for party, g in d.groupby('party_s'): add(name, party, g)
@@ -148,7 +176,7 @@ def analyze():
     m24 = p24.dropna(subset=['emi_label']); NUM['auc_2024_majority_label'] = float(roc_auc_score(m24.emi_label.astype(int), m24.emi))
     # ---- agreement / ICC for the 2026 sets
     for corpus, d in (('parliament', p26), ('twitter', t26)):
-        R = pd.read_csv(os.path.join(DATA, f'ratings_{corpus}_2026.csv'), dtype={'id': str}); R['emi'] = R.evidence_rating - R.intuition_rating
+        R = pd.read_csv(os.path.join(DATA, f'ratings_{corpus}_2026.csv'), dtype={'id': str}); R = R[~R.rater.isin(NUM['exclusion']['_bad'][corpus])]; R['emi'] = R.evidence_rating - R.intuition_rating
         res = {}
         for c in ['evidence_rating', 'intuition_rating', 'emi']:
             w = R.pivot_table(index='id', columns='rater', values=c); i1, ik, k = icc1(w); res[c] = dict(icc1=float(i1), icc1k=float(ik), k=float(k))
@@ -156,7 +184,7 @@ def analyze():
         binar = {c: float(R.assign(b=(R[c] >= 1).astype(int)).groupby('id').b.agg(lambda s: s.value_counts(normalize=True).iloc[0]).mean()) for c in ['evidence_rating', 'intuition_rating']}
         NUM[f'agreement_{corpus}_2026'] = dict(n_items=int(R.id.nunique()), n_raters=int(R.rater.nunique()), n_ratings=int(len(R)), icc=res, modal_agreement=modal, binary_agreement=binar,
                                               within_response_r=float(R.evidence_rating.corr(R.intuition_rating)), share_evidence=float((d.human_emi > 0).mean()), share_intuition=float((d.human_emi < 0).mean()))
-    NUM['n'] = {k: int(len(v)) for k, v in sets.items()}
+    NUM['exclusion'].pop('_bad', None); NUM['n'] = {k: int(len(v)) for k, v in sets.items()}
     NUM['rho_llm_vs_dictionary'] = {k: float(rho(v.llm_emi, v.emi)) for k, v in sets.items() if v.llm_emi.notna().any()}
     json.dump(NUM, open(os.path.join(OUT, 'numbers.json'), 'w'), indent=1)
     pd.set_option('display.width', 250); print(T.round(3).to_string(index=False)); print(json.dumps(NUM, indent=1)[:3000])

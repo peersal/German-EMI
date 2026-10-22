@@ -1,70 +1,93 @@
 {
+ "exclusion_rule": "all_failed",
+ "exclusion": {
+  "parliament": {
+   "raters_total": 76,
+   "raters_excluded": 17,
+   "ratings_kept": 1119,
+   "ratings_total": 1445,
+   "items_rated": 290,
+   "mean_raters": 3.8586206896551722,
+   "items_with_5": 72,
+   "items_with_lt3": 27
+  },
+  "twitter": {
+   "raters_total": 81,
+   "raters_excluded": 13,
+   "ratings_kept": 1340,
+   "ratings_total": 1600,
+   "items_rated": 300,
+   "mean_raters": 4.466666666666667,
+   "items_with_5": 154,
+   "items_with_lt3": 6
+  }
+ },
  "auc_2024_majority_label": 0.714914317302377,
  "agreement_parliament_2026": {
   "n_items": 290,
-  "n_raters": 76,
-  "n_ratings": 1445,
+  "n_raters": 59,
+  "n_ratings": 1119,
   "icc": {
    "evidence_rating": {
-    "icc1": 0.2687427876550556,
-    "icc1k": 0.6467932605907324,
-    "k": 4.982758620689655
+    "icc1": 0.3266392361398656,
+    "icc1k": 0.651782777285218,
+    "k": 3.8586206896551722
    },
    "intuition_rating": {
-    "icc1": 0.1848164220027573,
-    "icc1k": 0.5304456277412998,
-    "k": 4.982758620689655
+    "icc1": 0.28450504674062854,
+    "icc1k": 0.6054165858782001,
+    "k": 3.8586206896551722
    },
    "emi": {
-    "icc1": 0.2839556349279784,
-    "icc1k": 0.6639751394098341,
-    "k": 4.982758620689655
+    "icc1": 0.3499425533600646,
+    "icc1k": 0.6750286378993094,
+    "k": 3.8586206896551722
    }
   },
   "modal_agreement": {
-   "evidence_rating": 0.5331034482758622,
-   "intuition_rating": 0.544080459770115
+   "evidence_rating": 0.5714942528735631,
+   "intuition_rating": 0.604367816091954
   },
   "binary_agreement": {
-   "evidence_rating": 0.7778160919540229,
-   "intuition_rating": 0.751551724137931
+   "evidence_rating": 0.8111494252873562,
+   "intuition_rating": 0.8114942528735631
   },
-  "within_response_r": -0.5599521112540494,
-  "share_evidence": 0.27666666666666667,
-  "share_intuition": 0.6666666666666666
+  "within_response_r": -0.7052481261113479,
+  "share_evidence": 0.27,
+  "share_intuition": 0.6633333333333333
  },
  "agreement_twitter_2026": {
   "n_items": 300,
-  "n_raters": 81,
-  "n_ratings": 1600,
+  "n_raters": 68,
+  "n_ratings": 1340,
   "icc": {
    "evidence_rating": {
-    "icc1": 0.2745364018507052,
-    "icc1k": 0.6685477810338419,
-    "k": 5.33
+    "icc1": 0.3200725607072055,
+    "icc1k": 0.6775330116110643,
+    "k": 4.463333333333333
    },
    "intuition_rating": {
-    "icc1": 0.21764925383687206,
-    "icc1k": 0.5973794879522198,
-    "k": 5.333333333333333
+    "icc1": 0.36260326307186197,
+    "icc1k": 0.7175942503547817,
+    "k": 4.466666666666667
    },
    "emi": {
-    "icc1": 0.3041252445262659,
-    "icc1k": 0.6996477724070974,
-    "k": 5.33
+    "icc1": 0.3826408861240057,
+    "icc1k": 0.7344935147996778,
+    "k": 4.463333333333333
    }
   },
   "modal_agreement": {
-   "evidence_rating": 0.5239444444444444,
-   "intuition_rating": 0.5723333333333332
+   "evidence_rating": 0.5604444444444444,
+   "intuition_rating": 0.6186111111111111
   },
   "binary_agreement": {
-   "evidence_rating": 0.7904999999999999,
-   "intuition_rating": 0.7889999999999999
+   "evidence_rating": 0.8188333333333333,
+   "intuition_rating": 0.8287222222222221
   },
-  "within_response_r": -0.5780997826283488,
-  "share_evidence": 0.13333333333333333,
-  "share_intuition": 0.8066666666666666
+  "within_response_r": -0.7158183054785356,
+  "share_evidence": 0.15333333333333332,
+  "share_intuition": 0.8
  },
  "n": {
   "Bundestag 2024": 1144,
