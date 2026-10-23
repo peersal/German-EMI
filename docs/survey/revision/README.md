@@ -12,6 +12,6 @@ built with `code/05_validation/survey/0561_build_survey_samples.py` and `0562_ma
 | `original_survey_2024/` | surveyflow (consent, instructions, intro, end, gold standards) and config of the original validation survey, reused verbatim |
 | `sample_summary.md` | composition of the two samples by party |
 
-Requires `pip install potato-annotation==2.8.2`. Prolific API tokens, study ids and completion codes are
+The Twitter projects are published without the tweet texts and author ids (`data_files/survey_sample.csv` is omitted and `survey_sample_key.csv` carries tweet ids and metadata only), in line with the X Developer Agreement; `code/05_validation/survey/0561_build_survey_samples.py` regenerates both files from the corpus. Requires `pip install potato-annotation==2.8.2`. Prolific API tokens, study ids and completion codes are
 placeholders (`configs/prolific_config.yaml` is git-ignored); annotation state (`annotation_output/`,
 `project.sqlite*`, `layouts/`) is not included.
