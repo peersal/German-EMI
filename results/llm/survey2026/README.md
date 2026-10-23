@@ -1,6 +1,6 @@
 # LLM ratings on the 2026 validation surveys
 
-Run 22 October 2026 on ccu-k8s (one H100, about 5 minutes): Llama 3.1 8B Instruct and Qwen 2.5 7B Instruct rate the
+Run 22 October 2026 on one H100 GPU (about 5 minutes): Llama 3.1 8B Instruct and Qwen 2.5 7B Instruct rate the
 300 Bundestag chunks and the 300 tweets of the new Prolific surveys with the rating prompt (the two survey items, 0–4)
 and the use-vs-mention prompt. Inputs `inputs/survey_input.csv` and `inputs/survey_meta.csv` (built by
 `build_survey_input.py`), outputs `output/survey_{rating,use_mention}_<model>.parquet`, analysis `analyze_survey.py`
