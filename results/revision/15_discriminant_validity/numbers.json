@@ -1,0 +1,289 @@
+{
+ "dictionary_sizes": {
+  "moral": 6181,
+  "moral_virtue": 2270,
+  "moral_vice": 3634,
+  "negemo": 11624,
+  "posemo": 9005,
+  "anger": 4743,
+  "fear": 4022
+ },
+ "validation": {
+  "Bundestag pooled": {
+   "n": 1347,
+   "emi_coef_alone": 0.8947463378858179,
+   "emi_se_alone": 0.06710169073536146,
+   "emi_coef_with_controls": 0.8517308849949309,
+   "emi_se_with_controls": 0.07282796315393412,
+   "moral_coef": -0.09918755849718665,
+   "negemo_coef": -0.02489662872411629,
+   "posemo_coef": -0.14938590743705674,
+   "auc_emi": 0.7318270895998542,
+   "auc_controls_only": 0.6299870112113755,
+   "auc_emi_plus_controls": 0.7393628657369428,
+   "auc_emi_residualised": 0.703071734572965,
+   "pseudo_r2_emi": 0.11860399434850144,
+   "pseudo_r2_controls": 0.038908523381283255,
+   "pseudo_r2_both": 0.12615931136610536
+  },
+  "Bundestag 2025": {
+   "n": 1064,
+   "emi_coef_alone": 0.8818812801538137,
+   "emi_se_alone": 0.0738888921072535,
+   "emi_coef_with_controls": 0.7992121494262275,
+   "emi_se_with_controls": 0.08048770799962197,
+   "moral_coef": -0.11760224506883099,
+   "negemo_coef": -0.11916086445334334,
+   "posemo_coef": -0.16434879821007037,
+   "auc_emi": 0.7290569959327015,
+   "auc_controls_only": 0.6519342065184281,
+   "auc_emi_plus_controls": 0.7401121642686925,
+   "auc_emi_residualised": 0.6909068104853883,
+   "pseudo_r2_emi": 0.1168589741522571,
+   "pseudo_r2_controls": 0.05277743115514655,
+   "pseudo_r2_both": 0.12891693321431041
+  },
+  "Bundestag 2026": {
+   "n": 283,
+   "emi_coef_alone": 0.91769604360042,
+   "emi_se_alone": 0.1648245268510516,
+   "emi_coef_with_controls": 1.0470387162668946,
+   "emi_se_with_controls": 0.1816451007101107,
+   "moral_coef": -0.08087385616143448,
+   "negemo_coef": 0.42022620381161885,
+   "posemo_coef": -0.02236890605741204,
+   "auc_emi": 0.7239156626506025,
+   "auc_controls_only": 0.5591265060240964,
+   "auc_emi_plus_controls": 0.7479518072289156,
+   "auc_emi_residualised": 0.7351807228915662,
+   "pseudo_r2_emi": 0.11281020599202773,
+   "pseudo_r2_controls": 0.007689012514221938,
+   "pseudo_r2_both": 0.1337948007009323
+  },
+  "Twitter 2026": {
+   "n": 282,
+   "emi_coef_alone": 0.5478043749327022,
+   "emi_se_alone": 0.17655317962097666,
+   "emi_coef_with_controls": 0.6135283163703772,
+   "emi_se_with_controls": 0.19295922868686577,
+   "moral_coef": 0.40300348099251315,
+   "negemo_coef": -0.08072535212925044,
+   "posemo_coef": -0.09239489760477852,
+   "auc_emi": 0.6634297520661157,
+   "auc_controls_only": 0.6141528925619836,
+   "auc_emi_plus_controls": 0.6950413223140496,
+   "auc_emi_residualised": 0.6605371900826446,
+   "pseudo_r2_emi": 0.04374393771037155,
+   "pseudo_r2_controls": 0.019264531073028723,
+   "pseudo_r2_both": 0.06536102104566965
+  }
+ },
+ "correlations_bundestag_pooled": {
+  "emi~human_emi": 0.455,
+  "emi~moral": -0.322,
+  "emi~moral_virtue": -0.266,
+  "emi~moral_vice": -0.211,
+  "emi~negemo": -0.396,
+  "emi~posemo": -0.22,
+  "human_emi~moral": -0.194,
+  "human_emi~moral_virtue": -0.143,
+  "human_emi~moral_vice": -0.142,
+  "human_emi~negemo": -0.189,
+  "human_emi~posemo": -0.162,
+  "moral~moral_virtue": 0.819,
+  "moral~moral_vice": 0.532,
+  "moral~negemo": 0.315,
+  "moral~posemo": 0.262,
+  "moral_virtue~negemo": 0.115,
+  "moral_virtue~posemo": 0.257,
+  "moral_vice~moral_virtue": 0.07,
+  "moral_vice~negemo": 0.454,
+  "moral_vice~posemo": 0.086,
+  "negemo~posemo": 0.071
+ },
+ "correlations_twitter": {
+  "emi~human_emi": 0.363,
+  "emi~moral": -0.177,
+  "emi~moral_virtue": -0.136,
+  "emi~moral_vice": -0.165,
+  "emi~negemo": -0.337,
+  "emi~posemo": 0.052,
+  "human_emi~moral": 0.012,
+  "human_emi~moral_virtue": -0.035,
+  "human_emi~moral_vice": 0.104,
+  "human_emi~negemo": -0.169,
+  "human_emi~posemo": 0.092,
+  "moral~moral_virtue": 0.805,
+  "moral~moral_vice": 0.584,
+  "moral~negemo": 0.172,
+  "moral~posemo": 0.243,
+  "moral_virtue~negemo": -0.019,
+  "moral_virtue~posemo": 0.308,
+  "moral_vice~moral_virtue": 0.08,
+  "moral_vice~negemo": 0.392,
+  "moral_vice~posemo": 0.024,
+  "negemo~posemo": -0.067
+ },
+ "speeches": {
+  "n": 59170,
+  "rate_means": {
+   "moral": 1.503,
+   "negemo": 1.214,
+   "posemo": 2.605
+  },
+  "pre_post_2017": {
+   "moral": {
+    "pre": 1.4955946796517356,
+    "post": 1.5044333262285716,
+    "d": 0.009982962825033049
+   },
+   "negemo": {
+    "pre": 1.1638760911417754,
+    "post": 1.2271855341036484,
+    "d": 0.06530224687401631
+   },
+   "posemo": {
+    "pre": 2.48275238224006,
+    "post": 2.637658828288032,
+    "d": 0.13096081039164234
+   },
+   "emi_w2vparliament": {
+    "pre": 0.4412837267569686,
+    "post": -0.11604300597007172,
+    "d": -0.44197445864267737
+   }
+  },
+  "speech_level_spearman": {
+   "moral": -0.22378260311181397,
+   "negemo": -0.28622699940970137,
+   "posemo": -0.05012851261456248
+  }
+ },
+ "breakpoint": {
+  "EMI|baseline": {
+   "level_elec2017": {
+    "coef": -0.4205196803745208,
+    "se": 0.026636616878661167,
+    "p": 3.8065395905283585e-56
+   },
+   "level_elec2021": {
+    "coef": -0.20659635425355063,
+    "se": 0.022504107316530356,
+    "p": 4.2955552766825704e-20
+   },
+   "level_elec2025": {
+    "coef": -0.502208248453206,
+    "se": 0.04991678496005373,
+    "p": 8.223520986327295e-24
+   },
+   "slope_elec2021": {
+    "coef": -0.007837928393640323,
+    "se": 0.0010756238222375388,
+    "p": 3.17244363443736e-13
+   }
+  },
+  "EMI|+moral+emotion": {
+   "level_elec2017": {
+    "coef": -0.4440573393991424,
+    "se": 0.025694159563991285,
+    "p": 6.380991932784746e-67
+   },
+   "level_elec2021": {
+    "coef": -0.24578168365873346,
+    "se": 0.021715248681973897,
+    "p": 1.0640648342872482e-29
+   },
+   "level_elec2025": {
+    "coef": -0.4618002918648053,
+    "se": 0.048162892350986704,
+    "p": 8.954768849073258e-22
+   },
+   "slope_elec2021": {
+    "coef": -0.008454612457942347,
+    "se": 0.0010384827297776097,
+    "p": 3.9101562456743285e-16
+   },
+   "moral_z": {
+    "coef": -0.11459847341518714,
+    "se": 0.0050669407000765694,
+    "p": 2.955528952869846e-113
+   },
+   "negemo_z": {
+    "coef": -0.20964922107546236,
+    "se": 0.005101720170065284,
+    "p": 0.0
+   },
+   "posemo_z": {
+    "coef": -0.09926326119411168,
+    "se": 0.0047884735397696184,
+    "p": 1.8724297097343974e-95
+   }
+  },
+  "moral (z) as outcome": {
+   "level_elec2017": {
+    "coef": -0.012628677438937712,
+    "se": 0.023900223540978482,
+    "p": 0.5972275641062984
+   },
+   "level_elec2021": {
+    "coef": -0.0900505465690765,
+    "se": 0.02035068482116354,
+    "p": 9.646937096032501e-06
+   },
+   "level_elec2025": {
+    "coef": 0.06368105172316968,
+    "se": 0.04539808862227629,
+    "p": 0.16069874199503076
+   },
+   "slope_elec2021": {
+    "coef": 0.003612628025389982,
+    "se": 0.0009778288658699016,
+    "p": 0.0002202850674327492
+   }
+  },
+  "negemo (z) as outcome": {
+   "level_elec2017": {
+    "coef": -0.09031350024582888,
+    "se": 0.023228808916056262,
+    "p": 0.00010107557704822361
+   },
+   "level_elec2021": {
+    "coef": -0.08633370675569689,
+    "se": 0.019767004839199676,
+    "p": 1.256385892677839e-05
+   },
+   "level_elec2025": {
+    "coef": 0.1301892727333391,
+    "se": 0.04413583231759231,
+    "p": 0.003180404532491433
+   },
+   "slope_elec2021": {
+    "coef": -0.0019115486789348895,
+    "se": 0.0009505913259591845,
+    "p": 0.04433551118286038
+   }
+  },
+  "posemo (z) as outcome": {
+   "level_elec2017": {
+    "coef": 0.03932526365273867,
+    "se": 0.02329465411696391,
+    "p": 0.09137919825755349
+   },
+   "level_elec2021": {
+    "coef": -0.07876405239145161,
+    "se": 0.019837938349150958,
+    "p": 7.175962862040228e-05
+   },
+   "level_elec2025": {
+    "coef": 0.07180267445287394,
+    "se": 0.0443166041539017,
+    "p": 0.10518490033140532
+   },
+   "slope_elec2021": {
+    "coef": -0.004584228281531996,
+    "se": 0.0009558133803198095,
+    "p": 1.6174085676006484e-06
+   }
+  }
+ }
+}

@@ -11,6 +11,8 @@ Small output tables and figures of the revision scripts, in the paths the script
 | `parliament/tables/contagion_*`, `parliament/tables/temporal_comparison_*` | `code/04_analysis/0406_run_figure_cells.py contagion` / `split` / `split2000` |
 | `cross_platform_split_afd.csv` | `code/04_analysis/0406_run_figure_cells.py fig` |
 | `validation_2026/` | `code/05_validation/document/0517_validation_2026.py` (AUC tables, reliability, demographics, figures) |
+| `revision/15_discriminant_validity/` | `code/05_validation/document/0519_discriminant_validity.py` (moral and emotion dictionary scores: correlations, AUCs, logistic controls, breakpoint models) |
+| `revision/16_count_baseline/` | `code/05_validation/document/0520_count_baseline.py` (count-dictionary EMI versus DDR EMI and LLM composite) |
 | `word_influence/` | `code/04_analysis/words/0451_word_influence.py` (word-level contributions per party / camp and period) |
 | `llm/survey2026/` | `code/05_validation/llm/0572_analyze_survey.py` |
 
